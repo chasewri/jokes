@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import getJoke from "./utils/getJoke";
 import "./App.scss";
 
 function App() {
@@ -6,19 +7,8 @@ function App() {
     "Press the button to get a new joke!"
   );
 
-  async function getJoke() {
-    const url =
-      "https://cors-anywhere.herokuapp.com/https://official-joke-api.appspot.com/random_joke/";
-    const options = {
-    };
-
-    try {
-      let res = await fetch(url, options);
-      let data = await res.json();
-      return setJokeText(data);
-    } catch (err) {
-      console.log(err);
-    }
+  function jokeGetter() {
+    getJoke(setJokeText);
   }
 
   return (
@@ -31,7 +21,7 @@ function App() {
       <p className="punchline">{jokeText.punchline}</p>
       <button
         onClick={() => {
-          getJoke();
+          jokeGetter();
         }}
         className="button"
       >
