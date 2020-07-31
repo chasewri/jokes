@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  background: rgb(235,157,184);
+  background: linear-gradient(130deg, rgba(235,157,184,1) 51%, rgba(45,59,93,1) 54%);
+  overflow: hidden;
+}
+
+.App {
+  position: relative;
+  background-color: white;
+  color: black;
+  min-height: 500px;
+  height: 50%;
+  width: 50%;
+  left: 25%;
+  top: 25vh;
+  text-align: center;
+  .joke-content {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top: 5vh;
+  }
+  .punchline {
+    position: relative;
+    top: 12vh;
+    width: 80%;
+    left: 10%;
+  }
+  .button {
+    color: black;
+    padding: .5rem 2.25rem;
+    background-color: plum;
+    border-radius: 1rem;
+    border: none;
+    position: absolute;
+    bottom: 1rem;
+    margin: 0;
+    margin-left: -7vw;
+  }
+}
