@@ -10,7 +10,6 @@ function App() {
     const url =
       "https://cors-anywhere.herokuapp.com/https://official-joke-api.appspot.com/random_joke/";
     const options = {
-      headers: { "content-type": "application/json" },
     };
 
     try {

@@ -37,5 +37,8 @@ body {
     bottom: 1rem;
     margin: 0;
     margin-left: -7vw;
+    @media screen and (min-width: 1000px) {
+      margin-left: -3vw;
+    }
   }
 }
